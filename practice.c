@@ -100,3 +100,36 @@ printf("%d is not a leap year.\n", year);
 }
 return 0;
 }
+
+#include <stdio.h>
+int main() {
+int num;
+int Prime = 0;
+int divisor = 2;
+printf("Enter a number: ");
+scanf("%d", &num);
+if (num <= 0) {
+printf("Number entered: %d\n", num);
+} else if (num == 1) {
+printf("Neither prime nor composite\n");
+} else if (num == 2) {
+printf("Smallest and only even prime number\n");
+} else {
+for(divisor=2;divisor <= num;divisor++) {
+if (num % divisor == 0) {
+Prime = 1;
+break;
+}
+
+}
+if (Prime==0) {
+printf("Prime number\n");
+} else {
+printf("Composite number\n");
+if (num % 2 == 0) {
+printf("Even\n");
+} else {
+printf("Odd\n");
+}} }
+return 0;
+}
