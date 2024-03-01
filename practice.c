@@ -61,29 +61,42 @@
 // }
 // }
 
-#include<stdio.h>
-#include<math.h>
+// #include<stdio.h>
+// #include<math.h>
+// int main() {
+// float a, b, c,dis, root1,root2, real,img;
+// printf("Enter the value of a b and c \n");
+// scanf("%f%f%f",&a, &b, &c);
+// dis = b * b -4 * a * c;
+// if (dis ==0.0) {
+// printf("Roots are real and equal\n");
+// root1 =root2 = -b /(2.0 * a);
+// printf("Root1 is = %.2f andRoot 2= %.2f",root1, root2);
+// }
+//  else if (dis> 0.0) {
+// printf("Roots are real and unequal\n");
+// root1 = (-b + sqrt(dis)) / (2.0 * a);
+// root2 = (-b - sqrt(dis)) / (2.0 * a);
+// printf("Root 1 is = %.2f and Root 2= %.2f", root1, root2);
+// }
+// else {
+// printf("Roots are imaginary\n");
+// real = -b / (2.0 * a);
+// img = sqrt(-dis) / (2.0 * a);
+// printf("Root 1 is = %.2f +%.2f i and Root 2= %.2f - %.2f i", real, img, real,
+// img);
+// }
+// }
+
+#include <stdio.h>
 int main() {
-float a, b, c,dis, root1,root2, real,img;
-printf("Enter the value of a b and c \n");
-scanf("%f%f%f",&a, &b, &c);
-dis = b * b -4 * a * c;
-if (dis ==0.0) {
-printf("Roots are real and equal\n");
-root1 =root2 = -b /(2.0 * a);
-printf("Root1 is = %.2f andRoot 2= %.2f",root1, root2);
+int year;
+printf("Enter a year: ");
+scanf("%d", &year);
+if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+printf("%d is a leap year.\n", year);
+} else {
+printf("%d is not a leap year.\n", year);
 }
- else if (dis> 0.0) {
-printf("Roots are real and unequal\n");
-root1 = (-b + sqrt(dis)) / (2.0 * a);
-root2 = (-b - sqrt(dis)) / (2.0 * a);
-printf("Root 1 is = %.2f and Root 2= %.2f", root1, root2);
-}
-else {
-printf("Roots are imaginary\n");
-real = -b / (2.0 * a);
-img = sqrt(-dis) / (2.0 * a);
-printf("Root 1 is = %.2f +%.2f i and Root 2= %.2f - %.2f i", real, img, real,
-img);
-}
+return 0;
 }
